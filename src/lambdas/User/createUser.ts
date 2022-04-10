@@ -9,12 +9,14 @@ export const handler = async (
 
   // Instance of TodoService
   const userService = new UserService();
-  const user = await userService.createUser(fullName, email, cellphone, password);
+  const user = await userService.createUser(email, fullName, cellphone, password);
 
   return {
     statusCode: 201,
-    body: JSON.stringify({
-      item: user,
-    }),
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Credentials': true,
+    },
+    body: JSON.stringify(user),
   };
 };

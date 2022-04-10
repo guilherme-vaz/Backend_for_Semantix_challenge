@@ -17,9 +17,10 @@ export default class JobService {
     jobName: string,
     user: IUser,
     status: status,
+    recurrenceValue: number,
     recurrence: recurrence
   ): Promise<Job> {
-    const newJob = new Job(jobName, user, status, recurrence);
+    const newJob = new Job(jobName, user, status, recurrenceValue, recurrence);
 
     return await this.jobRepository.createJob(newJob);
   }

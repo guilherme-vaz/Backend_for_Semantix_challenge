@@ -54,6 +54,7 @@ const serverlessConfiguration: AWS = {
           http: {
             method: "POST",
             path: "users",
+            cors: true
           },
         },
       ],
@@ -67,6 +68,7 @@ const serverlessConfiguration: AWS = {
           http: {
             method: "GET",
             path: "/users",
+            cors: true
           },
         },
       ],
@@ -80,6 +82,7 @@ const serverlessConfiguration: AWS = {
           http: {
             method: "PATCH",
             path: "users/{id}",
+            cors: true
           },
         },
       ],
@@ -93,6 +96,7 @@ const serverlessConfiguration: AWS = {
           http: {
             method: "DELETE",
             path: "users/{id}",
+            cors: true
           },
         },
       ],
@@ -107,6 +111,7 @@ const serverlessConfiguration: AWS = {
           http: {
             method: "POST",
             path: "jobs",
+            cors: true
           },
         },
       ],
@@ -120,6 +125,7 @@ const serverlessConfiguration: AWS = {
           http: {
             method: "GET",
             path: "/jobs",
+            cors: true
           },
         },
       ],
@@ -133,6 +139,7 @@ const serverlessConfiguration: AWS = {
           http: {
             method: "PATCH",
             path: "jobs/{id}",
+            cors: true
           },
         },
       ],
@@ -146,6 +153,7 @@ const serverlessConfiguration: AWS = {
           http: {
             method: "DELETE",
             path: "jobs/{id}",
+            cors: true
           },
         },
       ],

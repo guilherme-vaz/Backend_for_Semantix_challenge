@@ -9,8 +9,10 @@ export const handler = async (
 
   return {
     statusCode: 201,
-    body: JSON.stringify({
-      item: jobs,
-    }),
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Credentials': true,
+    },
+    body: JSON.stringify(jobs),
   };
 };

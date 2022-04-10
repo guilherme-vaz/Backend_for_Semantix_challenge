@@ -16,12 +16,15 @@ class Job {
 
   public statusCode: status;
 
+  public recurrenceValue: number;
+
   public recurrence: recurrence;
 
   constructor(
     jobName: string,
     user: User,
     statusCode: status,
+    recurrenceValue: number,
     recurrence: recurrence
   ) {
     this.id = uuidv4();
@@ -29,6 +32,7 @@ class Job {
     this.jobName = jobName;
     this.user = user;
     this.statusCode = statusCode;
+    this.recurrenceValue = recurrenceValue;
     this.recurrence = recurrence;
   }
 }

@@ -38,10 +38,11 @@ class JobRepository extends MyDynamoDB {
       .update({
         TableName: this.jobsTable,
         Key: { id: partialJob.id },
-        UpdateExpression: "set jobName = :jobName, statusCode = :statusCode, recurrence = :recurrence",
+        UpdateExpression: "set jobName = :jobName, statusCode = :statusCode, recurrenceValue = :recurrenceValue, recurrence = :recurrence",
         ExpressionAttributeValues: {
           ":jobName": partialJob.jobName,
           ":statusCode": partialJob.statusCode,
+          ":recurrenceValue": partialJob.recurrenceValue,
           ":recurrence": partialJob.recurrence,
         },
         ReturnValues: "UPDATED_NEW",

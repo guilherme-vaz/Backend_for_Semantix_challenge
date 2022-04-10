@@ -10,8 +10,10 @@ export const handler = async (
 
   return {
     statusCode: 201,
-    body: JSON.stringify({
-      item: users,
-    }),
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Credentials': true,
+    },
+    body: JSON.stringify(users),
   };
 };
