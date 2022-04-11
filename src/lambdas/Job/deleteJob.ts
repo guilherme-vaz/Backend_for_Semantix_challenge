@@ -4,10 +4,8 @@ import JobService from "src/services/Job/JobService";
 export const handler = async (
   event: APIGatewayProxyEvent
 ): Promise<APIGatewayProxyResult> => {
-  //Get the id from url parameters
   const id = event.pathParameters.id;
 
-  // Instance of TodoService
   const jobService = new JobService();
 
   await jobService.deleteJobById(id);

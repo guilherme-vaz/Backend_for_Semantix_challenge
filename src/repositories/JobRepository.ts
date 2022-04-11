@@ -11,7 +11,6 @@ class JobRepository extends MyDynamoDB {
     this.dynamoClientDB = super.getDynamoClient();
   }
 
-  // Index
   async getAllJobs(): Promise<Job[]> {
     const result = await this.dynamoClientDB
       .scan({
@@ -22,7 +21,6 @@ class JobRepository extends MyDynamoDB {
     return result.Items as Job[];
   }
 
-  // Create job
   async createJob(job: Job): Promise<Job> {
     await this.dynamoClientDB.put({
         TableName: this.jobsTable,
@@ -32,7 +30,6 @@ class JobRepository extends MyDynamoDB {
     return job;
   }
 
-   // Update job
    async updateJob(partialJob: Partial<Job>): Promise<Job> {
     const updated = await this.dynamoClientDB
       .update({
@@ -52,7 +49,6 @@ class JobRepository extends MyDynamoDB {
     return updated.Attributes as Job;
   }
 
-  // Delete job
   async deleteJobById(id: string) {
     return this.dynamoClientDB
       .delete({

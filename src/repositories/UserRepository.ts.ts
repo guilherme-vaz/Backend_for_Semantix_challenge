@@ -12,7 +12,6 @@ class UserRepository extends MyDynamoDB {
     this.dynamoClientDB = super.getDynamoClient();
   }
 
-  // Index
   async getAllUsers(): Promise<User[]> {
     const result = await this.dynamoClientDB
       .scan({
@@ -23,7 +22,6 @@ class UserRepository extends MyDynamoDB {
     return result.Items as User[];
   }
 
-  // Create user
   async createUser(user: User): Promise<User> {
     await this.dynamoClientDB.put({
         TableName: this.usersTable,
@@ -33,7 +31,6 @@ class UserRepository extends MyDynamoDB {
     return user;
   }
 
-  // Update todo
   async updateUser(partialUser: Partial<User>): Promise<User> {
     const updated = await this.dynamoClientDB
       .update({
@@ -51,7 +48,6 @@ class UserRepository extends MyDynamoDB {
     return updated.Attributes as User;
   }
 
-  // Delete user
   async deleteUserById(id: string) {
     return this.dynamoClientDB
       .delete({

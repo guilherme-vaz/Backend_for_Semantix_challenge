@@ -1,3 +1,55 @@
+# Backend - Teste Fullstack Jr
+
+## Construir uma aplicação completa escalável. 
+
+### Features
+
+- [x] Criação de usuário
+- [x] Edição de usuário
+- [x] Remoção de usuário
+- [x] Filtro de usuários por nome
+- [ ] Filtro de usuários por data de criação 
+- [x] Criação de trabalhos
+- [x] Edição de trabalho
+- [x] Remoção de trabalho
+- [x] Filtro de trabalhos por nome
+- [ ] Filtro de trabalhos por data de criação 
+- [x] Paginação
+
+
+### Pré-requisitos
+
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+
+### 🎲 Rodando o Back End (servidor)
+
+```bash
+# Clone este repositório
+$ git clone <https://github.com/guilherme-vaz/Backend_for_Semantix_challenge.git>
+
+# Instale as dependências
+$ yarn install
+
+# Execute a aplicação em modo de desenvolvimento
+$ npm run dev:server
+
+# O servidor inciará na porta:3333 - acesse <http://localhost:3333>
+
+### 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+- [Node.js](https://nodejs.org/en/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Serverless Framework](https://www.serverless.com/)
+- [AWS Lambda](https://aws.amazon.com/pt/lambda/)
+- [Amazon DynamoDB](https://aws.amazon.com/pt/dynamodb/)
+- [UUID](https://www.npmjs.com/package/uuid)
+- [BCryptJs](https://www.npmjs.com/package/bcryptjs)
+
+
 # Serverless - AWS Node.js Typescript
 
 This project has been generated using the `aws-nodejs-typescript` template from the [Serverless framework](https://www.serverless.com/).
