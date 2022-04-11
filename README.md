@@ -16,6 +16,19 @@
 - [ ] Filtro de trabalhos por data de criação 
 - [x] Paginação
 
+### 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+- [Node.js](https://nodejs.org/en/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Serverless Framework](https://www.serverless.com/)
+- [AWS Lambda](https://aws.amazon.com/pt/lambda/)
+- [Amazon DynamoDB](https://aws.amazon.com/pt/dynamodb/)
+- [UUID](https://www.npmjs.com/package/uuid)
+- [BCryptJs](https://www.npmjs.com/package/bcryptjs)
+
+
 
 ### Pré-requisitos
 
@@ -36,18 +49,6 @@ $ yarn install
 $ npm run dev:server
 
 # O servidor inciará na porta:3333 - acesse <http://localhost:3333>
-
-### 🛠 Tecnologias
-
-As seguintes ferramentas foram usadas na construção do projeto:
-
-- [Node.js](https://nodejs.org/en/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Serverless Framework](https://www.serverless.com/)
-- [AWS Lambda](https://aws.amazon.com/pt/lambda/)
-- [Amazon DynamoDB](https://aws.amazon.com/pt/dynamodb/)
-- [UUID](https://www.npmjs.com/package/uuid)
-- [BCryptJs](https://www.npmjs.com/package/bcryptjs)
 
 
 # Serverless - AWS Node.js Typescript
